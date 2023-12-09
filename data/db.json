@@ -2,8 +2,8 @@
   "products": [
     {
       "id": 1,
-      "name": "Computer",
-      "price": 7500,
+      "name": "Mac pro",
+      "price": "10500",
       "checked": true
     },
     {

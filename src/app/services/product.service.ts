@@ -29,4 +29,13 @@ export class ProductService {
   // public searchProduct(keyword: string, currentPage: number, pageSize: number):Observable<Array<Product>>{
   //   return     this.http.get<Array<Product>>(`http://localhost:8089/products?name_like=${keyword}&_page=${currentPage}&_limit=${pageSize}`)
   // }
+
+  getProductById(productId: number):Observable<Product> {
+    return this.http.get<Product>(`http://localhost:8089/products/${productId}`);
+
+  }
+
+  updateProduct(product:Product) :Observable<Product>{
+    return this.http.put<Product>(`http://localhost:8089/products/${product.id}`,product);
+  }
 }
